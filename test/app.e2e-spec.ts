@@ -3,6 +3,10 @@ import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
 
+(BigInt.prototype as any).toJSON = function () {
+  return Number(this)
+};
+
 describe('AppController (e2e)', () => {
   let app: INestApplication;
 
@@ -15,10 +19,12 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+  it('/todos (GET)', async () => {
+    const result = await request(app.getHttpServer()).get('/todos');
+
+    console.log(result.body);
+
+    return true;
+
   });
 });

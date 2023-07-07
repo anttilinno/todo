@@ -10,13 +10,13 @@ datasource db {
 model User {
   id          BigInt    @id @default(autoincrement())
   username    String
-  todos       Todo[]
+//  todos       Todo[]
 }
 
 model Todo {
   id          BigInt    @id @default(autoincrement())
   title       String
   content     String
-  user        User     @relation(fields: [userId], references: [id])
-  userId      BigInt
+//  user        User     @relation(fields: [userId], references: [id])
+//  userId      BigInt
 }

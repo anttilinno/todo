@@ -1,0 +1,27 @@
+### All todos
+GET http://localhost:3000/todos
+
+
+### Certain todo
+GET http://localhost:3000/todos/3
+
+### Create todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "title": "Simple todo",
+    "content": "Oh gods lend me strength"
+}
+
+### Update todo
+PATCH http://localhost:3000/todos/6
+Content-Type: application/json
+
+{
+    "title": "Oh my changed todo",
+    "content": "Do not care"
+}
+
+### Delete todo
+DELETE http://localhost:3000/todos/6
