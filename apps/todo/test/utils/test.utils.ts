@@ -1,6 +1,6 @@
 import { Prisma, Todo } from "@prisma/client";
 import { INestApplication } from "@nestjs/common";
-import { PrismaService } from "@app/prisma/prisma.service";
+import { PrismaService } from "@todo/prisma/prisma.service";
 
 interface WithId {
     id: BigInt | number;
