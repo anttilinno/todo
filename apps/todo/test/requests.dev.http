@@ -3,7 +3,7 @@ GET http://localhost:3000/todos
 
 
 ### Certain todo
-GET http://localhost:3000/todos/3
+GET http://localhost:3000/todos/21
 
 ### Create todo
 POST http://localhost:3000/todos
